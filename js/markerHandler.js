@@ -93,7 +93,12 @@ AFRAME.registerComponent("markerhandler", {
       var orderButtton = document.getElementById("order-button");
       var orderSummaryButtton = document.getElementById("order-summary-button");
 
-      var payButton = document.getElementById("pay-button");
+      /* REPLACE COMMENT WITH THE CODE
+    
+    
+    
+    
+      */
 
       // Handling Click Events
       ratingButton.addEventListener("click", function () {
@@ -122,7 +127,12 @@ AFRAME.registerComponent("markerhandler", {
         this.handleOrderSummary()
       );
 
-      payButton.addEventListener("click", () => this.handlePayment());
+      /* REPLACE COMMENT WITH THE CODE
+    
+    
+    
+    
+    */
     }
   },
  
@@ -236,67 +246,22 @@ AFRAME.registerComponent("markerhandler", {
       tableBodyTag.appendChild(tr);
     });
 
-    //Create a table row to Total bill
-    var totalTr = document.createElement("tr");
-
-    //Create a empty cell (for not data)
-    var td1 = document.createElement("td");
-    td1.setAttribute("class", "no-line");
-
-    //Create a empty cell (for not data)
-    var td2 = document.createElement("td");
-    td1.setAttribute("class", "no-line");
-
-    //Create a cell for TOTAL
-    var td3 = document.createElement("td");
-    td1.setAttribute("class", "no-line text-center");
-
-    //Create <strong> element to emphasize the text
-    var strongTag = document.createElement("strong");
-    strongTag.innerHTML = "Total";
-
-    td3.appendChild(strongTag);
-
-    //Create cell to show total bill amount
-    var td4 = document.createElement("td");
-    td1.setAttribute("class", "no-line text-right");
-    td4.innerHTML = "$" + orderSummary.total_bill;
-
-    //Append cells to the row
-    totalTr.appendChild(td1);
-    totalTr.appendChild(td2);
-    totalTr.appendChild(td3);
-    totalTr.appendChild(td4);
-
-    //Append the row to the table
-    tableBodyTag.appendChild(totalTr);
+    /* REPLACE COMMENT WITH THE CODE
+    
+    
+    
+    
+    */
   },
   handlePayment: function () {
-    // Close Modal
-    document.getElementById("modal-div").style.display = "none";
-
-    // Getting Table Number
-    var tNumber;
-    tableNumber <= 9 ? (tNumber = `T0${tableNumber}`) : `T${tableNumber}`;
-
-    //Reseting current orders and total bill
-    firebase
-      .firestore()
-      .collection("tables")
-      .doc(tNumber)
-      .update({
-        current_orders: {},
-        total_bill: 0
-      })
-      .then(() => {
-        swal({
-          icon: "success",
-          title: "Thanks For Paying !",
-          text: "We Hope You Enjoyed Your Food !!",
-          timer: 2500,
-          buttons: false
-        });
-      });
+    
+    /* REPLACE COMMENT WITH THE CODE
+    
+    
+    
+    
+    */
+    
   },
   handleMarkerLost: function () {
     // Changing button div visibility
